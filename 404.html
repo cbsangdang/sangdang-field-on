@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>페이지를 찾을 수 없습니다 | 상당 현장 ON</title>
+    <style>
+      body {
+        font-family: "Malgun Gothic", sans-serif;
+        background: #f4f7fb;
+        color: #172a43;
+        margin: 0;
+        padding: 12vh 24px;
+        line-height: 1.8;
+      }
+      main {
+        max-width: 600px;
+        margin: auto;
+        background: #fff;
+        border: 1px solid #dfe6ee;
+        border-radius: 16px;
+        padding: 40px;
+      }
+      h1 {
+        font-size: 25px;
+      }
+      p {
+        color: #627184;
+      }
+      a {
+        display: inline-block;
+        background: #235ec5;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p>상당 현장 ON · 404</p>
+      <h1>페이지를 찾을 수 없습니다.</h1>
+      <ul>
+        <li>주소가 바뀌었거나 삭제된 페이지일 수 있음</li>
+        <li>‘홈으로 이동’을 눌러 필요한 메뉴 다시 선택</li>
+      </ul>
+      <a id="home-link" href="./index.html">홈으로 이동</a>
+    </main>
+    <script>
+      /* GitHub 프로젝트 Pages는 첫 경로가 저장소명입니다. */ const pieces =
+        location.pathname.split("/").filter(Boolean);
+      document.getElementById("home-link").href =
+        location.hostname.endsWith(".github.io") && pieces.length
+          ? "/" + pieces[0] + "/index.html"
+          : "/index.html";
+    </script>
+  </body>
+</html>
