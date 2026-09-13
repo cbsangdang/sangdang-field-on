@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#102b50" />
+    <meta name="robots" content="noindex" />
+    <title>게시물 편집 도우미 | 상당 현장 ON</title>
+    <link rel="icon" type="image/png" href="../assets/images/logo.png" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script defer src="../assets/js/local-open.js"></script>
+    <script type="module" src="../assets/js/editor.js"></script>
+  </head>
+  <body data-page="editor">
+    <a class="skip-link" href="#main">본문 바로가기</a>
+    <header id="site-header"></header>
+    <main id="main" class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">홈</a><span>›</span><span>운영 도구</span>
+      </div>
+      <div class="page-heading">
+        <div>
+          <h1>게시물 편집 도우미</h1>
+          <p>글을 작성하고, 사이트에 올릴 게시물 목록 파일 만들기</p>
+        </div>
+      </div>
+      <ol class="editor-note editor-steps" aria-label="게시물 등록 순서">
+        <li>메뉴 선택</li>
+        <li>게시물 작성·수정</li>
+        <li>목록에 반영</li>
+        <li>JSON 다운로드</li>
+        <li>GitHub의 data 폴더에 업로드</li>
+      </ol>
+      <div class="editor-layout">
+        <aside class="editor-sidebar" aria-label="편집할 자료 선택">
+          <h2>자료 선택</h2>
+          <label for="editor-menu" class="sr-only">편집할 메뉴</label>
+          <select id="editor-menu">
+            <option value="manuals">매뉴얼 ON</option>
+            <option value="education">교육 ON</option>
+            <option value="notices">알림 ON</option>
+            <option value="cases">사례 ON</option>
+          </select>
+          <button type="button" class="btn secondary" id="new-post">
+            + 새 게시물
+          </button>
+          <div
+            id="editor-posts"
+            class="editor-posts"
+            aria-label="게시물 목록"
+          ></div>
+          <label class="import-label"
+            >저장해 둔 JSON 불러오기<input
+              type="file"
+              id="import-json"
+              accept=".json,application/json"
+          /></label>
+          <div class="editor-help">
+            <details>
+              <summary>사용 방법 확인</summary>
+              <ol>
+                <li>
+                  메뉴 선택 후 ‘새 게시물’ 또는 수정할 게시물 선택
+                </li>
+                <li>내용 입력 후 ‘목록에 반영’ 선택</li>
+                <li>‘JSON 다운로드’를 눌러 파일 내려받기</li>
+                <li>GitHub의 data 폴더에 같은 이름으로 올려 기존 파일 교체</li>
+              </ol>
+              <ul class="help-list">
+                <li>JSON: 게시물 목록을 담는 파일</li>
+                <li>사이트 반영: 내려받은 JSON을 GitHub에 업로드한 뒤 적용</li>
+                <li>창을 닫기 전: 작업 내용이 사라지지 않도록 JSON 다운로드</li>
+                <li>PDF·이미지: 경로 입력과 별도로 실제 파일도 GitHub에 업로드</li>
+              </ul>
+            </details>
+          </div>
+        </aside>
+        <section class="editor-form">
+          <h2 id="editor-heading">게시물 작성</h2>
+          <p class="editor-help" id="dataset-label" role="status">
+            게시물 목록 불러오는 중
+          </p>
+          <form id="post-form">
+            <fieldset
+              id="editor-fields"
+              disabled
+              style="border: 0; padding: 0; margin: 0; min-width: 0"
+            >
+              <div class="form-grid">
+                <label class="full"
+                  >제목 *<input
+                    name="title"
+                    required
+                    maxlength="160"
+                    placeholder="게시물 제목 입력"
+                /></label>
+                <label
+                  >분류 *<input
+                    name="category"
+                    list="category-options"
+                    required
+                    maxlength="50" /><datalist id="category-options"></datalist
+                ></label>
+                <label
+                  >등록일 *<input name="date" type="date" required
+                /></label>
+                <label class="full"
+                  >요약내용<textarea
+                    name="summary"
+                    rows="2"
+                    placeholder="게시물을 열었을 때 먼저 보일 핵심 내용 입력"
+                  ></textarea>
+                </label>
+                <label class="full"
+                  >본문<textarea
+                    name="content"
+                    rows="8"
+                    placeholder="본문 입력 · 줄을 바꾸려면 Enter"
+                  ></textarea>
+                  <small>· 작성한 글과 줄바꿈을 게시물에 그대로 표시</small>
+                </label>
+                <label class="full case-only" hidden
+                  >발생 개요<textarea name="overview" rows="3"></textarea>
+                </label>
+                <label class="full case-only" hidden
+                  >주요 조치<textarea name="actions" rows="3"></textarea>
+                </label>
+                <label class="full case-only" hidden
+                  >시사점<textarea name="lessons" rows="3"></textarea>
+                </label>
+                <label class="full"
+                  >대표 첨부파일 경로<input
+                    name="file"
+                    placeholder="예: files/manuals/sample.pdf"
+                  /><small class="field-help"
+                    ><span>· GitHub에 올려 둔 파일의 폴더명과 파일명 입력</span>
+                    <span>· 경로는 files/부터 입력 · 앞에 /는 붙이지 않기</span></small
+                  ></label
+                >
+                <label class="full"
+                  >이미지 경로<textarea
+                    name="images"
+                    rows="3"
+                    placeholder="files/education/card-01.jpg&#10;files/education/card-02.jpg"
+                  ></textarea
+                  ><small class="field-help"
+                    ><span>· 이미지 경로는 한 줄에 하나씩 입력</span>
+                    <span>· 먼저 보여줄 이미지부터 위에서 아래로 입력</span></small
+                  ></label
+                >
+                <section class="full attachment-editor" aria-labelledby="attachment-heading">
+                  <h3 id="attachment-heading">추가 첨부자료</h3>
+                  <ul class="editor-help help-list" id="attachment-help">
+                    <li>자료 이름: 화면에 보일 이름 입력</li>
+                    <li>파일 경로: GitHub에 올려 둔 파일의 위치 입력</li>
+                    <li>자료가 여러 개라면 ‘첨부자료 추가’ 선택</li>
+                    <li>필요 없는 자료는 해당 줄의 ‘삭제’ 선택</li>
+                  </ul>
+                  <div id="attachment-rows"></div>
+                  <button class="btn secondary" id="add-attachment" type="button">첨부자료 추가</button>
+                </section>
+                <label class="full"
+                  >태그<input
+                    name="tags"
+                    placeholder="예: 주취자, 현장대응, FTX"
+                  /><small>· 검색에 쓸 단어를 쉼표로 구분해 입력</small></label
+                >
+                <div class="full checkboxes">
+                  <label
+                    ><input type="checkbox" name="important" /> 중요 · 상단
+                    고정</label
+                  ><label
+                    ><input type="checkbox" name="sample" /> 가상 예시
+                    자료</label
+                  >
+                </div>
+                <label class="full"
+                  >게시물 ID *<input
+                    name="id"
+                    required
+                    pattern="[A-Za-z0-9_-]+"
+                    placeholder="새 게시물은 자동 생성"
+                  /><small class="field-help"
+                    ><span>· ID는 게시물을 구분하는 고유 이름</span>
+                    <span>· 기존 게시물은 연결 주소가 유지되도록 ID 그대로 사용</span>
+                    <span>· 직접 입력할 때는 영문·숫자·하이픈·밑줄 사용</span></small
+                  ></label
+                >
+              </div>
+              <div class="editor-actions">
+                <button class="btn" type="submit">목록에 반영</button
+                ><button class="btn secondary" id="preview-post" type="button">
+                  본문 미리보기</button
+                ><button
+                  class="btn secondary danger-text"
+                  id="delete-post"
+                  type="button"
+                >
+                  삭제
+                </button>
+              </div>
+            </fieldset>
+          </form>
+          <div
+            id="editor-status"
+            class="editor-status"
+            role="status"
+            hidden
+          ></div>
+          <div id="editor-preview" class="editor-preview" hidden></div>
+          <button
+            class="btn"
+            id="download-json"
+            type="button"
+            disabled
+            style="margin-top: 22px"
+          >
+            JSON 다운로드
+          </button>
+          <ul class="editor-help help-list">
+            <li>다운로드 파일: 지금 선택한 메뉴의 전체 게시물 포함</li>
+            <li>사이트 반영: GitHub의 data 폴더에 같은 이름으로 업로드</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+    <footer id="site-footer"></footer>
+  </body>
+</html>
