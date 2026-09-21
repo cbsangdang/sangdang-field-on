@@ -1,5 +1,27 @@
 [
   {
+    "id": "education-mubvua8b",
+    "title": "신종스캠 범죄신고 시 지역경찰 주요 조치사항",
+    "category": "카드뉴스",
+    "date": "2026-09-22",
+    "summary": "<노쇼> <팀미션> <연애빙자> 등 의심계좌 거래정지 제도와 신종수법 유형별 대응 핵심 정리",
+    "content": "1. 범죄유형 파악\n- 신종수법 식별로 정확한 상황 파악\n\n2. 거래정지 안내\n- 의심계좌 신속 차단으로 피해금 인출 시도 저지\n\n3. 추가 피해 방지\n- 맞춤형 안내와 조치로 2차 피해 예방",
+    "file": "",
+    "important": true,
+    "sample": false,
+    "images": [
+      "files/education/1.jpg",
+      "files/education/2.jpg",
+      "files/education/3.jpg",
+      "files/education/4.jpg",
+      "files/education/5.jpg",
+      "files/education/6.jpg",
+      "files/education/7.jpg"
+    ],
+    "tags": [],
+    "attachments": []
+  },
+  {
     "id": "education-001",
     "title": "현장 경찰관 직무교육 카드뉴스",
     "category": "카드뉴스",
@@ -13,7 +35,11 @@
       "files/education/field-training-02.svg",
       "files/education/field-training-03.svg"
     ],
-    "tags": ["카드뉴스", "직무교육", "소통"],
+    "tags": [
+      "카드뉴스",
+      "직무교육",
+      "소통"
+    ],
     "sample": true
   },
   {
@@ -26,7 +52,11 @@
     "content": "훈련 목표\n상황 설명의 정확성과 팀 내 의사소통을 점검합니다.\n\n가상 상황\n공개된 공간에서 도움이 필요한 사람이 발견되었다는 신고 상황을 가정합니다.\n\n토의 과제\n① 지금 알고 있는 사실은 무엇인가?\n② 추가로 확인할 내용은 무엇인가?\n③ 다른 담당자에게 어떤 순서로 전달할 것인가?\n\n훈련 후 정리\n좋았던 점 한 가지와 개선할 점 한 가지를 기록합니다.\n\n실제 현장 대응 절차나 권한을 규정하는 문서가 아닙니다.",
     "file": "files/education/ftx-workbook.pdf",
     "images": [],
-    "tags": ["주취자", "FTX", "상황판단"],
+    "tags": [
+      "주취자",
+      "FTX",
+      "상황판단"
+    ],
     "sample": true
   },
   {
@@ -39,7 +69,11 @@
     "content": "학습 목표\n정보를 정확하게 구분하고 간결하게 전달하는 연습\n\n토의 내용\n• 신고 내용과 확인한 사실을 어떻게 구분할 것인가?\n• 활동 기록을 읽는 사람이 이해하기 어려운 표현은 없는가?\n• 인계 전에 다시 확인할 사항은 무엇인가?\n\n실제 112 신고정보는 포함하지 않았습니다.",
     "file": "",
     "images": [],
-    "tags": ["112", "초동조치", "인계"],
+    "tags": [
+      "112",
+      "초동조치",
+      "인계"
+    ],
     "sample": true
   },
   {
@@ -52,7 +86,11 @@
     "content": "진행 방법\n1. 사례 ON의 가상 사례를 읽습니다.\n2. 확인한 정보와 아직 확인하지 못한 정보를 나눕니다.\n3. 서로 다른 설명을 비교하고 혼동될 수 있는 부분을 고칩니다.\n4. 다음 훈련에서 확인할 학습 목표를 정합니다.",
     "file": "",
     "images": [],
-    "tags": ["소통", "사례학습", "RTC"],
+    "tags": [
+      "소통",
+      "사례학습",
+      "RTC"
+    ],
     "sample": true
   }
 ]
