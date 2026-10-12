@@ -1,22 +1,23 @@
 [
   {
-    "id": "education-mubvua8b",
-    "title": "신종스캠 범죄신고 시 지역경찰 주요 조치사항",
+    "id": "education-mv4vpuyj",
+    "title": "관계성 범죄 현장대응 A to Z",
     "category": "카드뉴스",
-    "date": "2026-09-22",
-    "summary": "<노쇼> <팀미션> <연애빙자> 등 의심계좌 거래정지 제도와 신종수법 유형별 대응 핵심 정리",
-    "content": "1. 범죄유형 파악\n- 신종수법 식별로 정확한 상황 파악\n\n2. 거래정지 안내\n- 의심계좌 신속 차단으로 피해금 인출 시도 저지\n\n3. 추가 피해 방지\n- 맞춤형 안내와 조치로 2차 피해 예방",
+    "date": "2026-10-12",
+    "summary": "가정폭력·스토킹·아동학대·교제폭력 등 관계성 범죄는 재발 및 강력범죄로 이어질 우려가 있어, 현장 경찰관의 신속하고 정확한 초기 대응이 무엇보다 중요합니다.\n현장 출동부터 피해자 보호, 긴급조치 및 관련 서류 작성까지 실무에 필요한 핵심 내용은「관계성 범죄 통합 케어 로드맵」을 참고해주세요.",
+    "content": "- 초기 대응: 신고 이력 확인, 가·피해자 분리, 위험성 및 피해 상황 파악\n\n- 현장 조치: 범죄 유형별 응급조치 및 피해자 보호 절차\n\n- 긴급 보호: 긴급임시조치·긴급응급조치 요건 및 위반 시 대응\n\n- 서류 작성: 유형별 필수 서류와 추가 작성 서류 안내\n\n- 실무 유의사항: 스토킹 전자장치 부착, 아동학대 대응, 피해자 보호 등 주요 변경사항",
     "file": "",
-    "important": true,
+    "important": false,
     "sample": false,
     "images": [
-      "files/education/1.jpg",
-      "files/education/2.jpg",
-      "files/education/3.jpg",
-      "files/education/4.jpg",
-      "files/education/5.jpg",
-      "files/education/6.jpg",
-      "files/education/7.jpg"
+      "files/education/관계성1.jpg",
+      "files/education/관계성2.jpg",
+      "files/education/관계성3.jpg",
+      "files/education/관계성4.jpg",
+      "files/education/관계성5.jpg",
+      "files/education/관계성6.jpg",
+      "files/education/관계성7.jpg",
+      "files/education/관계성8.jpg"
     ],
     "tags": [],
     "attachments": []
