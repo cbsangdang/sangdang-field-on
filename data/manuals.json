@@ -1,5 +1,19 @@
 [
   {
+    "id": "manual-mw8hjevq",
+    "title": "신임수사관 길라잡이 교재 파일",
+    "category": "수사서류",
+    "date": "2026-11-09",
+    "summary": "신임수사관 길라잡이 교재 파일",
+    "content": "신입수사관 길라잡이 교재 파일",
+    "file": "files/manuals/신임수사관 길라잡이 교재 파일.pdf",
+    "important": false,
+    "sample": false,
+    "images": [],
+    "tags": [],
+    "attachments": []
+  },
+  {
     "id": "manual-mw8heqjg",
     "title": "중요 치안상황 보고체계",
     "category": "보고체계",
