@@ -1,5 +1,19 @@
 [
   {
+    "id": "manual-mw8heqjg",
+    "title": "중요 치안상황 보고체계",
+    "category": "보고체계",
+    "date": "2026-11-09",
+    "summary": "- 중요 치안상황 발생 시 보고체계에 대해 알아보아요",
+    "content": "지휘 보고, 기능 보고 체계에 대해 다음의 pdf 파일을 참고해 보고해주세요.",
+    "file": "files/manuals/중요 치안상황 보고체계.pdf",
+    "important": false,
+    "sample": false,
+    "images": [],
+    "tags": [],
+    "attachments": []
+  },
+  {
     "id": "manual-mvk98rti",
     "title": "경찰관 직무집행법(2026. 7. 7. 시행)",
     "category": "경찰",
